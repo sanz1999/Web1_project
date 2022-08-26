@@ -1,0 +1,57 @@
+﻿[
+  {
+    "Id": 1,
+    "FirstName": "Sasa",
+    "LastName": "Kitic",
+    "Gender": 0,
+    "EMail": "sasa@gmail.com:",
+    "BirthDate": "1999-03-22T21:22:20",
+    "Role": 0,
+    "TrainingVisitor": [],
+    "TrainingTrainer": [],
+    "CenterIdWorking": -1,
+    "OwnedCenters": [],
+    "UserName": "sanz1999",
+    "Password": "hahadlock99",
+    "Exist": true
+  },
+  {
+    "Id": 2,
+    "FirstName": "Uros",
+    "LastName": "Petrov",
+    "Gender": 0,
+    "EMail": "uros@gmail.com:",
+    "BirthDate": "2000-10-04T01:20:20",
+    "Role": 1,
+    "TrainingVisitor": [],
+    "TrainingTrainer": [],
+    "CenterIdWorking": 1,
+    "OwnedCenters": [],
+    "UserName": "urospetrov",
+    "Password": "urospetrov",
+    "Exist": true
+  },
+  {
+    "Id": 3,
+    "FirstName": "Stefan",
+    "LastName": "Scekic",
+    "Gender": 0,
+    "EMail": "stefan@yahoo.com:",
+    "BirthDate": "2000-05-19T11:01:20",
+    "Role": 1,
+    "TrainingVisitor": [],
+    "TrainingTrainer": [],
+    "CenterIdWorking": 2,
+    "OwnedCenters": [],
+    "UserName": "stefanstefan",
+    "Password": "stefanstefan",
+    "Exist": false
+  }
+
+
+
+
+
+
+
+]

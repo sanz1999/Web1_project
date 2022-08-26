@@ -1,19 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+using System.Net;
+using System.Net.Http;
+using System.Web.Http;
+using System.Web.Http.Results;
 
 namespace PR060_2019_Web_projekat.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : ApiController
     {
-        public ActionResult Index()
+        [HttpGet, Route("")]
+        public RedirectResult Index()
         {
-            ViewBag.Title = "Home Page";
-
-            return View();
-            //comment for 1st push
+            var requestUri = Request.RequestUri;
+            return Redirect(requestUri.AbsoluteUri + "Html/Index.html");
         }
     }
 }

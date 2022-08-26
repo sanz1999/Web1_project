@@ -5,7 +5,7 @@ using System.Web;
 
 namespace PR060_2019_Web_projekat.Models
 {
-    public class Komentar
+    public class Comment
     {
     }
 }
