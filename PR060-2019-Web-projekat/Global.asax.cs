@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PR060_2019_Web_projekat.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -18,6 +19,19 @@ namespace PR060_2019_Web_projekat
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            Users listOfUsers = new Users("~/App_Data/Users.json");
+            HttpContext.Current.Application["Users"] = listOfUsers as Users;
+
+            Comments listOfComments = new Comments("~/App_Data/Comments.json");
+            HttpContext.Current.Application["Comments"] = listOfComments as Comments;
+
+            GroupTrainings listOfGroupTrainings = new GroupTrainings("~/App_Data/Comments.json");
+            HttpContext.Current.Application["GroupTrainings"] = listOfGroupTrainings as GroupTrainings;
+
+            FitnessCenters listOfFitnessCenters = new FitnessCenters("~/App_Data/FitnessCenters.json");
+            HttpContext.Current.Application["FitnessCenters"] = listOfFitnessCenters as FitnessCenters;
+
         }
     }
 }

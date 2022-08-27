@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Web;
 using System.Web.Http;
 using System.Web.Http.Results;
 
@@ -14,7 +15,9 @@ namespace PR060_2019_Web_projekat.Controllers
         public RedirectResult Index()
         {
             var requestUri = Request.RequestUri;
-            return Redirect(requestUri.AbsoluteUri + "Html/Index.html");
+            //var niz = HttpContext.Current.Application["Users"];
+            return Redirect(requestUri.AbsoluteUri + "HTML/Index.html");
+
         }
     }
 }

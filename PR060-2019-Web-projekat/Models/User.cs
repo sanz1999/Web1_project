@@ -8,26 +8,12 @@ namespace PR060_2019_Web_projekat.Models
     
     public class User
     {
-        public User(int id, string firstName, string lastName, string gender, string eMail, DateTime birthDate, Enum_Role role, List<int> trainingVisitor, List<int> trainingTrainer, int centerIdWorking, List<int> ownedCenters, string userName, string password, bool exist)
+        public User(int id, string firstName, string lastName, Enum_Gender gender, string eMail, DateTime birthDate, Enum_Role role, List<int> trainingVisitor, List<int> trainingTrainer, int centerIdWorking, List<int> ownedCenters, string userName, string password, bool exist)
         {
-            if (gender.ToLower() == "musko")
-            {
-                Gender = Enum_Gender.Male;
-            }
-            else if (gender.ToLower() == "zensko")
-            {
-                Gender = Enum_Gender.Female;
-            }
-            else
-            {
-                Gender = Enum_Gender.Other;
-            }
-            
-
             Id = id;
             FirstName = firstName;
             LastName = lastName;
-            
+            Gender = gender;
             EMail = eMail;
             BirthDate = birthDate;
             Role = role;
@@ -39,7 +25,6 @@ namespace PR060_2019_Web_projekat.Models
             Password = password;
             Exist = exist;
         }
-
 
         public int Id { get; set; }
 
