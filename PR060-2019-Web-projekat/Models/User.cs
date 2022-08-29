@@ -8,6 +8,9 @@ namespace PR060_2019_Web_projekat.Models
     
     public class User
     {
+
+        public User() { }
+
         public User(int id, string firstName, string lastName, Enum_Gender gender, string eMail, DateTime birthDate, Enum_Role role, List<int> trainingVisitor, List<int> trainingTrainer, int centerIdWorking, List<int> ownedCenters, string userName, string password, bool exist)
         {
             Id = id;

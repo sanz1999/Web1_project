@@ -20,4 +20,12 @@ namespace PR060_2019_Web_projekat.Models
         Other
     }
 
+    public enum Enum_TrainingType {
+        Yoga,
+        LesMillsTone,
+        BodyPump,
+        Cardio,
+        Other
+    }
+
 }

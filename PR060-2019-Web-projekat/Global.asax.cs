@@ -12,6 +12,10 @@ namespace PR060_2019_Web_projekat
 {
     public class WebApiApplication : System.Web.HttpApplication
     {
+        protected void Application_PostAuthorizeRequest()
+        {
+            System.Web.HttpContext.Current.SetSessionStateBehavior(System.Web.SessionState.SessionStateBehavior.Required);
+        }
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
@@ -19,6 +23,8 @@ namespace PR060_2019_Web_projekat
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            
 
             Users listOfUsers = new Users("~/App_Data/Users.json");
             HttpContext.Current.Application["Users"] = listOfUsers as Users;
@@ -31,6 +37,10 @@ namespace PR060_2019_Web_projekat
 
             FitnessCenters listOfFitnessCenters = new FitnessCenters("~/App_Data/FitnessCenters.json");
             HttpContext.Current.Application["FitnessCenters"] = listOfFitnessCenters as FitnessCenters;
+
+            User user = new User();
+            HttpContext.Current.Application["user"] = user as User;
+
 
         }
     }

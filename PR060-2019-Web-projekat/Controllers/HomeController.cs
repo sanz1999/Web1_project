@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PR060_2019_Web_projekat.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -17,6 +18,7 @@ namespace PR060_2019_Web_projekat.Controllers
             var requestUri = Request.RequestUri;
             //var niz = HttpContext.Current.Application["Users"];
             return Redirect(requestUri.AbsoluteUri + "HTML/Index.html");
+            
 
         }
     }
