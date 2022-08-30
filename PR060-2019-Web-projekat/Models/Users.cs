@@ -10,7 +10,7 @@ namespace PR060_2019_Web_projekat.Models
 {
     public class Users
     {
-        public List<User> ListOfUsers { get; set; }
+        public static List<User> ListOfUsers { get; set; }
 
         public Users(string path) {
             path = HostingEnvironment.MapPath(path);
@@ -22,6 +22,54 @@ namespace PR060_2019_Web_projekat.Models
                 ListOfUsers = JsonConvert.DeserializeObject<List<User>>(json);
             }
 
+        }
+        public static User GetByUsername(string username)
+        {
+            return ListOfUsers.Find(x => x.UserName == username);
+        }
+        public static bool ExistByUsername(string username)
+        {
+            return ListOfUsers.Exists(x => x.UserName == username);
+        }
+
+        public static bool FindByMail(  string mail)
+        {
+            return ListOfUsers.Exists(x => x.EMail == mail);
+        }
+        public static User Add( User user)
+        {
+            ListOfUsers.Add(user);
+            Save(ListOfUsers);
+            return user;
+        }
+
+        public static User AddTrening( string username, int id)
+        {
+            //GetById(ListOfUsers,username).TreninziPosetilac.Add(id);
+
+           Save(ListOfUsers);
+
+            return GetByUsername(username);
+        }
+
+        public static User Update(List<User> ListOfUsers, User user)
+        {
+            ListOfUsers.Remove(GetByUsername( user.UserName));
+            ListOfUsers.Add(user);
+            Save(ListOfUsers);
+            return user;
+        }
+        //JSON OPERATIONS
+        internal static void Save(List<User> ListOfUsers)
+        {
+            string path = "~/App_Data/Users.json";
+            path = HostingEnvironment.MapPath(path);
+            string json = JsonConvert.SerializeObject(ListOfUsers, Formatting.Indented);
+
+            using (StreamWriter sw = new StreamWriter(path))
+            {
+                sw.WriteLine(json);
+            }
         }
 
     }

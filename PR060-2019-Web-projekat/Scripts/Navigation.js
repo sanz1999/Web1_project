@@ -1,5 +1,22 @@
 $(document).ready(function(){
 
+    //Sending request to determine which role is logged
+    $.ajax({
+        url: '/api/login',
+        method: 'GET',
+        success: function (data) {
+            temp = data;
+            if (temp.Role == 0) { Visitor(); }
+            else if (temp.Role == 1) { Trainer(); }
+            else if (temp.Role == 2) { Owner(); }
+            else { Unregistered();}
+            
+
+        }
+    });
+
+
+
 
 
     //NAVIGATION
@@ -30,14 +47,68 @@ $(document).ready(function(){
         window.location.href = "Profile.html";
     });
     $('#nav-sign_out').click(function () {
-
-        //logika za odjavljivanje
-        window.location.href = "Index.html";
+        $.ajax({
+            type: "GET",
+            url: '/api/login/logout',
+            success: function (data) {
+                alert("Uspesno odjavljeni");
+                Unregistered();
+                window.location.href = "Index.html";
+            },
+            error: function (data) {
+                    alert("Neuspesno");
+                } 
+        });
+        
     });
-
-
-
-
 
 });
 
+function Unregistered() {
+    $("#nav-index").show();
+    $("#nav-history").hide();
+    $("#nav-my-trainings").hide();
+    $("#nav-edit-trainers").hide();
+    $("#nav-edit-centers").hide();
+    $("#nav-registration").show();
+    $("#nav-login").show();
+    $("#nav-profile").hide();
+    $("#nav-sign_out").hide();
+     
+}
+function Visitor() {
+    $("#nav-index").show();
+    $("#nav-history").show();
+    $("#nav-my-trainings").hide();
+    $("#nav-edit-trainers").hide();
+    $("#nav-edit-centers").hide();
+    $("#nav-registration").hide();
+    $("#nav-login").hide();
+    $("#nav-profile").show();
+    $("#nav-sign_out").show();
+
+}
+function Trainer() {
+    $("#nav-index").show();
+    $("#nav-history").show();
+    $("#nav-my-trainings").show();
+    $("#nav-edit-trainers").hide();
+    $("#nav-edit-centers").hide();
+    $("#nav-registration").hide();
+    $("#nav-login").hide();
+    $("#nav-profile").show();
+    $("#nav-sign_out").show();
+
+}
+function Owner() {
+    $("#nav-index").show();
+    $("#nav-history").hide();
+    $("#nav-my-trainings").hide();
+    $("#nav-edit-trainers").show();
+    $("#nav-edit-centers").show();
+    $("#nav-registration").hide();
+    $("#nav-login").hide();
+    $("#nav-profile").show();
+    $("#nav-sign_out").show();
+
+}

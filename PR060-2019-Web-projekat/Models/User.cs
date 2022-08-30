@@ -57,5 +57,32 @@ namespace PR060_2019_Web_projekat.Models
 
         public bool Exist { get; set; }
 
+        public override bool Equals(object obj)
+        {
+            var user = obj as User;
+            return user != null &&
+                   UserName == user.UserName &&
+                   Password == user.Password;
+        }
+
+        public override int GetHashCode()
+        {
+            var hashCode = -1233357182;
+            hashCode = hashCode * -1521134295 + Id.GetHashCode();
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(FirstName);
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(LastName);
+            hashCode = hashCode * -1521134295 + Gender.GetHashCode();
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(EMail);
+            hashCode = hashCode * -1521134295 + BirthDate.GetHashCode();
+            hashCode = hashCode * -1521134295 + Role.GetHashCode();
+            hashCode = hashCode * -1521134295 + EqualityComparer<List<int>>.Default.GetHashCode(TrainingVisitor);
+            hashCode = hashCode * -1521134295 + EqualityComparer<List<int>>.Default.GetHashCode(TrainingTrainer);
+            hashCode = hashCode * -1521134295 + CenterIdWorking.GetHashCode();
+            hashCode = hashCode * -1521134295 + EqualityComparer<List<int>>.Default.GetHashCode(OwnedCenters);
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(UserName);
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Password);
+            hashCode = hashCode * -1521134295 + Exist.GetHashCode();
+            return hashCode;
+        }
     }
 }
