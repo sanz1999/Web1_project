@@ -16,7 +16,6 @@ namespace PR060_2019_Web_projekat.Controllers
         public RedirectResult Index()
         {
             var requestUri = Request.RequestUri;
-            //var niz = HttpContext.Current.Application["Users"];
             return Redirect(requestUri.AbsoluteUri + "HTML/Index.html");
             
 

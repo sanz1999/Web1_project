@@ -1,7 +1,5 @@
-﻿*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+﻿body {
+
     background-color: #97908e;
 }
 
@@ -40,3 +38,114 @@ header{
     text-decoration: none;
 }
 
+#fitness-centers-table {
+    border :2px;
+    background-color: #71615c;
+}
+.container table {
+    border-collapse: separate;
+    border-spacing: 20px 5px;
+}
+.container {
+    
+    display: flex;
+    justify-content: center;
+}
+.login-form {
+    margin : 5px 5px 5px 5px;
+}
+
+button {
+    align-items: center;
+    background-color: #584845;
+    border-radius: 200px;
+    border-width: 0;
+    color: #FFFFFF;
+    justify-content: center;
+    line-height: 1.5;
+    padding: 6px 20px;
+    position: relative;
+    text-align: center;
+    vertical-align: top;
+}
+#fitness-centers-table th {
+    cursor: pointer;
+}
+
+#fitness-centers-div {
+    display: flex;
+    justify-content: center;
+    color:antiquewhite;
+}
+#fitness-centers-table,th {
+    table-layout: fixed;
+    width: 60%;
+    border-collapse: collapse;
+    border: 3px solid #372c2a;
+    text-align:center;
+}
+#fitness-centers-search {
+    display: flex;
+    justify-content: center;
+    color: antiquewhite;
+}
+#search-table {
+    width: 60%;
+    table-layout: fixed;
+
+    background-color: #71615c;
+    border: 3px solid #372c2a;
+    text-align: center;
+}
+ #search-min-year, #search-max-year {
+    width: 70px;
+    color:black;
+}
+#search-name, #search-address {
+    color: black;
+    width:150px;
+}
+
+#fitness-center-details {
+    display: flex;
+    justify-content: center;
+    color: antiquewhite;
+}
+#fitness-center-details-table {
+    table-layout: fixed;
+    background-color: #71615c;
+    border: 3px solid #372c2a;
+    text-align: center;
+    width: 50% ;
+}
+#group-trainings-details {
+    display: flex;
+    justify-content: center;
+    color: antiquewhite;
+}
+
+#group-trainings-details-table {
+    table-layout: fixed;
+    background-color: #71615c;
+    border: 3px solid #372c2a;
+    text-align: center;
+    width: 80%;
+}
+#group-trainings-details-table tr{
+    border: 3px solid #372c2a;
+}
+
+.comment {
+    display: inline-block;
+    text-align: center;
+    margin: 20px 20px 20px 20px;
+    border: 2px dotted #372c2a;
+    background-color: #71615c;
+    color: antiquewhite;
+    padding: 10px 10px 10px 10px;
+}
+#comments-details {
+    display: flex;
+    justify-content: center;
+    color: antiquewhite;
+}

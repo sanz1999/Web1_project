@@ -1,1 +1,54 @@
-﻿
+﻿[
+  {
+    "Id": 1,
+    "Name": "Ahilej",
+    "Addresss": {
+      "Street": "Kozaracka 1",
+      "City": "Novi Sad",
+      "ZIP": 21000
+    },
+    "OpeningDate": "2000-10-04T01:20:20",
+    "OwnerId": 3,
+    "FeeYear": 1200,
+    "FeeMonth": 900,
+    "PriceTrainig": 250,
+    "PriceTrainingGroup": 140,
+    "PriceTrainingPrivate": 400,
+    "Exist": true
+  },
+  {
+    "Id": 2,
+    "Name": "Spartak",
+    "Addresss": {
+      "Street": "Bulevar 1",
+      "City": "Novi Sad",
+      "ZIP": 21001
+    },
+    "OpeningDate": "2005-10-04T01:20:20",
+    "OwnerId": 3,
+    "FeeYear": 1100,
+    "FeeMonth": 800,
+    "PriceTrainig": 350,
+    "PriceTrainingGroup": 240,
+    "PriceTrainingPrivate": 500,
+    "Exist": true
+  },
+  {
+    "Id": 3,
+    "Name": "Beowolf",
+    "Addresss": {
+      "Street": "Dr Sime Milosevica 1",
+      "City": "Novi Sad",
+      "ZIP": 21001
+    },
+    "OpeningDate": "2009-10-04T01:20:20",
+    "OwnerId": 3,
+    "FeeYear": 11100,
+    "FeeMonth": 8100,
+    "PriceTrainig": 3510,
+    "PriceTrainingGroup": 2410,
+    "PriceTrainingPrivate": 5100,
+    "Exist": true
+  }
+
+]

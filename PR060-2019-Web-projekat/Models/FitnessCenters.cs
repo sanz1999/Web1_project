@@ -23,6 +23,13 @@ namespace PR060_2019_Web_projekat.Models
                 ListOfFitnessCenters = JsonConvert.DeserializeObject<List<FitnessCenter>>(json);
             }
 
+            
         }
+        public static FitnessCenter GetById(List<FitnessCenter> centers, int id)
+        {
+            return centers.Find(o => o.Id == id);
+        }
+
+
     }
 }

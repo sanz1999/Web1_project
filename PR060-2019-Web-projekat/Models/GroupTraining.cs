@@ -8,22 +8,12 @@ namespace PR060_2019_Web_projekat.Models
     
     public class GroupTraining
     {
-        public GroupTraining(int id, Enum_TrainingType type, int centerId, int duration, DateTime appointment, int capacity, List<User> visitors)
-        {
-            Id = id;
-            this.type = type;
-            CenterId = centerId;
-            Duration = duration;
-            Appointment = appointment;
-            Capacity = capacity;
-            Visitors = visitors;
-            Exist = true;
-        }
+        
 
-        public GroupTraining(int id, Enum_TrainingType type, int centerId, int duration, DateTime appointment, int capacity, List<User> visitors, bool exist)
+        public GroupTraining(int id, Enum_TrainingType type, int centerId, int duration, DateTime appointment, int capacity, List<int> visitors, bool exist)
         {
             Id = id;
-            this.type = type;
+            Type = type;
             CenterId = centerId;
             Duration = duration;
             Appointment = appointment;
@@ -34,7 +24,7 @@ namespace PR060_2019_Web_projekat.Models
 
         public int Id { get; set; }
 
-        public Enum_TrainingType type { get; set; }
+        public Enum_TrainingType Type { get; set; }
 
         public int CenterId { get; set; }
 
@@ -44,7 +34,7 @@ namespace PR060_2019_Web_projekat.Models
 
         public int Capacity { get; set; }
 
-        public List<User> Visitors { get; set; } 
+        public List<int> Visitors { get; set; } 
 
         public bool Exist { get; set; } 
     }

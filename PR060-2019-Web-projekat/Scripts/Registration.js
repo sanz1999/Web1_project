@@ -23,13 +23,8 @@
                     alert("Uspesna registracija");
                     window.location.href = 'Index.html';
                 },
-                error: function (request) {
-                    if (request.status == 400) {
-                        alert("Greska");
-                        }
-                    else {
-                        alert("Greska  2");
-                    }
+                error: function (data) {
+                    alert(data.responseJSON['Message']);
                 }
                 
             });

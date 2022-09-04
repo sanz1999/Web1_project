@@ -27,6 +27,10 @@ namespace PR060_2019_Web_projekat.Models
         {
             return ListOfUsers.Find(x => x.UserName == username);
         }
+        public static User GetById(int id)
+        {
+            return ListOfUsers.Find(x => x.Id == id);
+        }
         public static bool ExistByUsername(string username)
         {
             return ListOfUsers.Exists(x => x.UserName == username);
@@ -52,9 +56,9 @@ namespace PR060_2019_Web_projekat.Models
             return GetByUsername(username);
         }
 
-        public static User Update(List<User> ListOfUsers, User user)
+        public static User Update( User user)
         {
-            ListOfUsers.Remove(GetByUsername( user.UserName));
+            ListOfUsers.Remove(GetById( user.Id));
             ListOfUsers.Add(user);
             Save(ListOfUsers);
             return user;

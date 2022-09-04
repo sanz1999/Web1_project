@@ -12,7 +12,16 @@ namespace PR060_2019_Web_projekat.Controllers
 {
     public class UserController : ApiController
     {
-
-        
+        public PersonModel GetOwnerName(int id) {
+            Users users = HttpContext.Current.Application["Users"] as Users;
+            User user = Users.GetById(id);
+            return new PersonModel() { Username = user.FirstName + " " +user.LastName,Password = "" };
+        }
+        [HttpPost]
+        [Route("api/User/CompleteUser")]
+        public User CompleteUser([FromBody]Login_data login) {
+            User user = HttpContext.Current.Session["user"] as User;
+            return user;
+        }
     }
 }

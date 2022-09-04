@@ -13,7 +13,7 @@ namespace PR060_2019_Web_projekat.Controllers
     {
         [HttpPost]
         [Route("api/registration")]
-        public HttpResponseMessage Post([FromBody]User person)
+        public IHttpActionResult Post([FromBody]User person)
         {
             Users users = HttpContext.Current.Application["Users"] as Users;
 
@@ -25,16 +25,42 @@ namespace PR060_2019_Web_projekat.Controllers
             person.TrainingVisitor = new List<int>();
 
             if (Users.FindByMail(person.EMail)) {
-                return new HttpResponseMessage(HttpStatusCode.NotAcceptable) { Content = new StringContent("Zauzet mail")};
+                return BadRequest("Prosledjeni e-mail je vec u upotrebi");
             }
             else if(Users.ExistByUsername(person.UserName)){
-                return new HttpResponseMessage(HttpStatusCode.BadRequest) { Content = new StringContent("Zauzeto ime") };
+                return BadRequest("Korisnicko ime je zauzeto");
             }
-            Users.ListOfUsers.Add(person);
-            Users.Save(Users.ListOfUsers);
+            Users.Add(person);
             HttpContext.Current.Application["Users"] = users;
-            return new HttpResponseMessage(HttpStatusCode.Created); 
+            return Ok();
 
+        }
+        [HttpPut]
+        [Route("api/registration/update")]
+        public IHttpActionResult Put([FromBody]User person) {
+            Users users = HttpContext.Current.Application["Users"] as Users;
+            User updated = Users.GetById(person.Id);
+            foreach (User x in Users.ListOfUsers) {
+                if (x.Id != person.Id) {
+                    if (x.EMail == person.EMail) {
+                        return BadRequest("Prosledjeni e-mail je vec u upotrebi");
+                    }else if (x.UserName == person.UserName)
+                    {
+                        return BadRequest("Korisnicko ime je zauzeto");
+                    }
+                }
+            }
+            updated.UserName = person.UserName;
+            updated.LastName = person.LastName;
+            updated.FirstName = person.FirstName;
+            updated.BirthDate = person.BirthDate;
+            updated.Gender = person.Gender;
+            updated.Password = person.Password;
+            updated.EMail = person.EMail;
+          
+            Users.Update(updated);
+            HttpContext.Current.Application["Users"] = users;
+            return Ok();
         }
         
         

@@ -1,19 +1,29 @@
-$(document).ready(function(){
-
-    //Sending request to determine which role is logged
-    $.ajax({
-        url: '/api/login',
-        method: 'GET',
-        success: function (data) {
-            temp = data;
-            if (temp.Role == 0) { Visitor(); }
-            else if (temp.Role == 1) { Trainer(); }
-            else if (temp.Role == 2) { Owner(); }
-            else { Unregistered();}
-            
-
-        }
-    });
+$(document).ready(function () {
+    var roles=["Visitor","Trainer","Owner","Unregistered"]
+    var user = sessionStorage.getItem("user_username");
+    var user_role = sessionStorage.getItem("user_type");
+    if (user == null ) {
+        //Sending request to determine which role is logged
+        $.ajax({
+            url: '/api/login',
+            method: 'GET',
+            success: function (data) {
+                sessionStorage.setItem("user_username", data.Username);
+                sessionStorage.setItem("user_type", roles[data.Role]);
+                temp = data;
+                if (temp.Role == 0) { Visitor(); }
+                else if (temp.Role == 1) { Trainer(); }
+                else if (temp.Role == 2) { Owner(); }
+                else { Unregistered(); }
+            }
+        });
+    } else {
+       
+        if (user_role == "Visitor") { Visitor(); }
+        else if (user_role == "Trainer") { Trainer(); }
+        else if (user_role == "Owner") { Owner(); }
+        else { Unregistered(); }
+    }
 
 
 
@@ -53,6 +63,8 @@ $(document).ready(function(){
             success: function (data) {
                 alert("Uspesno odjavljeni");
                 Unregistered();
+                sessionStorage.setItem("user_username", "");
+                sessionStorage.setItem("user_type", roles[3]);
                 window.location.href = "Index.html";
             },
             error: function (data) {

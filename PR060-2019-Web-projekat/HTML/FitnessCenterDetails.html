@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script src="../Scripts/jquery-3.3.1.js"></script>
+    <script src="../Scripts/FitnessCenterDetails.js" ></script>
+    <script src="../Scripts/Navigation.js"></script>
+    <link href="../Content/bootstrap.css" rel="stylesheet" />
+    <link href="../Content/Site.css" rel="stylesheet" />
+    <title>Istorija</title>
+</head>
+<body>
+    <!---------------HEADER WITH MENU-------------------->
+    <header>
+        <nav class="nav-left">
+            <ul class="nav_links">
+                <li><a id="nav-index" href="#">Fitnes Centri</a></li>
+                <li><a id="nav-history" href="#">Istorija</a></li>
+                <li><a id="nav-my-trainings" href="#">Moji treninzi</a></li>
+                <li><a id="nav-edit-trainers" href="#">Upravljaj trenerima</a></li>
+                <li><a id="nav-edit-centers" href="#">Upravljaj fitnes centrima</a></li>
+            </ul>
+        </nav>
+        <nav class="nav-right">
+            <ul ul class="nav_links">
+                <li><a id="nav-registration" href="#">Registracija</a></li>
+                <li><a id="nav-login" href="#">Prijava</a></li>
+                <li><a id="nav-profile" href="#">Profil</a></li>
+                <li><a id="nav-sign_out" href="#">Odjava</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--------------------FITNESS CENTER DETAILS--------------------------------->
+    <br />
+    <br />
+    <div id="fitness-center-details">
+        <table id="fitness-center-details-table">
+            <tr>
+                <th colspan="2">FITNES CENTAR</th>
+            </tr>
+            <tr>
+                <td>Id centra</td>
+                <td id="fcd-id"></td>
+            </tr>
+            <tr>
+                <td>Naziv</td>
+                <td id="fcd-name"></td>
+            </tr>
+            <tr>
+                <td>Adresa</td>
+                <td id="fcd-address"></td>
+            </tr>
+            <tr>
+                <td>Datum otvaranja</td>
+                <td id="fcd-date"></td>
+            </tr>
+            <tr>
+                <td>Vlasnik</td>
+                <td id="fcd-owner"></td>
+            </tr>
+            <tr>
+                <td>Godisnja clanarina</td>
+                <td id="fcd-fee-year"></td>
+            </tr>
+            <tr>
+                <td>Mesecna clanarina</td>
+                <td id="fcd-fee-month"></td>
+            </tr>
+            <tr>
+                <td>Cena obicnog treninga</td>
+                <td id="fcd-training"></td>
+            </tr>
+            <tr>
+                <td>Cena grupnog treninga</td>
+                <td id="fcd-training-group"></td>
+            </tr>
+            <tr>
+                <td>Cena privatnog treninga</td>
+                <td id="fcd-training-private"></td>
+            </tr>
+
+
+        </table>
+    </div>
+    <br />
+    <br />
+    <!--------------------GROUP TRAINING DETAILS--------------------------------->
+    <div id="group-trainings-details">
+        <table id="group-trainings-details-table">
+            <tr>
+                <th colspan="5">Grupni treninzi</th>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <th>Tip</th>
+                <th>Trajanje</th>
+                <th>Vreme</th>
+                <th>Prijavljeno/Ukupno</th>
+            </tr>
+        </table>
+    </div>
+    <br />
+    <!----------------------------COMMENTS--------------------------------------->
+    <div id="comments-details">
+
+    </div>
+
+</body>
+</html>

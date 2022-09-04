@@ -18,8 +18,8 @@ namespace PR060_2019_Web_projekat.Controllers
             {
                 user = new User();
                 user.Role = Enum_Role.Undefined;
-                HttpContext.Current.Session["user"] = user;
-                return new Login_data(Enum_Role.Undefined, "123", true); ;
+                HttpContext.Current.Session["user"] = user as User;
+                return new Login_data(Enum_Role.Undefined, "", true); ;
             }
 
             return new Login_data(user.Role, user.UserName, true);

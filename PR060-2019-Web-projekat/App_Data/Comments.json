@@ -1,5 +1,28 @@
 ﻿[
-
+  {
+    "Id": 1,
+    "CenterId": 1,
+    "Username": "sanz1999",
+    "Content": "Higijena je odlicna, cene pristupacne",
+    "Approved": true,
+    "RatingGrade": 5
+  },
+  {
+    "Id": 2,
+    "CenterId": 1,
+    "Username": "urospetrov",
+    "Content": "Higijena je okej,zaposleni neljubazni",
+    "Approved": true,
+    "RatingGrade": 3
+  },
+  {
+    "Id": 3,
+    "CenterId": 2,
+    "Username": "sanz1999",
+    "Content": "Hladno je u teretani",
+    "Approved": true,
+    "RatingGrade": 4
+  }
 
 
 

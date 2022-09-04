@@ -32,7 +32,7 @@ namespace PR060_2019_Web_projekat
             Comments listOfComments = new Comments("~/App_Data/Comments.json");
             HttpContext.Current.Application["Comments"] = listOfComments as Comments;
 
-            GroupTrainings listOfGroupTrainings = new GroupTrainings("~/App_Data/Comments.json");
+            GroupTrainings listOfGroupTrainings = new GroupTrainings("~/App_Data/GroupTrainings.json");
             HttpContext.Current.Application["GroupTrainings"] = listOfGroupTrainings as GroupTrainings;
 
             FitnessCenters listOfFitnessCenters = new FitnessCenters("~/App_Data/FitnessCenters.json");
