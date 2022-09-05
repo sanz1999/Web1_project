@@ -1,30 +1,42 @@
-﻿[
+[
   {
     "Id": 1,
     "CenterId": 1,
     "Username": "sanz1999",
     "Content": "Higijena je odlicna, cene pristupacne",
-    "Approved": true,
-    "RatingGrade": 5
+    "RatingGrade": 5,
+    "Approved": true
   },
   {
     "Id": 2,
     "CenterId": 1,
     "Username": "urospetrov",
     "Content": "Higijena je okej,zaposleni neljubazni",
-    "Approved": true,
-    "RatingGrade": 3
+    "RatingGrade": 3,
+    "Approved": true
   },
   {
     "Id": 3,
     "CenterId": 2,
     "Username": "sanz1999",
     "Content": "Hladno je u teretani",
-    "Approved": true,
-    "RatingGrade": 4
+    "RatingGrade": 4,
+    "Approved": true
+  },
+  {
+    "Id": 4,
+    "CenterId": 2,
+    "Username": "sanz1999",
+    "Content": "",
+    "RatingGrade": 5,
+    "Approved": false
+  },
+  {
+    "Id": 5,
+    "CenterId": 2,
+    "Username": "sanz1999",
+    "Content": "jasndoinjadsonads",
+    "RatingGrade": 5,
+    "Approved": false
   }
-
-
-
-
 ]

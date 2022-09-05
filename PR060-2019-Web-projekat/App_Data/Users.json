@@ -32,14 +32,17 @@
     "Exist": false
   },
   {
-    "Id": 3,
+    "Id": 8,
     "FirstName": "Vanja",
     "LastName": "Grabez",
     "Gender": 0,
     "EMail": "vanja@gmail.com",
     "BirthDate": "1998-11-29T00:00:00",
     "Role": 0,
-    "TrainingVisitor": [],
+    "TrainingVisitor": [
+      1,
+      5
+    ],
     "TrainingTrainer": [],
     "CenterIdWorking": -1,
     "OwnedCenters": [],
@@ -96,6 +99,22 @@
     "Exist": true
   },
   {
+    "Id": 7,
+    "FirstName": "Sanja",
+    "LastName": "Vasic",
+    "Gender": 1,
+    "EMail": "sanja@gmail.com",
+    "BirthDate": "2022-09-04T00:00:00",
+    "Role": 0,
+    "TrainingVisitor": [],
+    "TrainingTrainer": [],
+    "CenterIdWorking": -1,
+    "OwnedCenters": [],
+    "UserName": "sanja98",
+    "Password": "123",
+    "Exist": true
+  },
+  {
     "Id": 1,
     "FirstName": "Sasa",
     "LastName": "Kitic",
@@ -103,7 +122,12 @@
     "EMail": "sasa@gmail.com",
     "BirthDate": "1999-03-22T00:00:00",
     "Role": 0,
-    "TrainingVisitor": [],
+    "TrainingVisitor": [
+      1,
+      5,
+      2,
+      6
+    ],
     "TrainingTrainer": [],
     "CenterIdWorking": -1,
     "OwnedCenters": [],

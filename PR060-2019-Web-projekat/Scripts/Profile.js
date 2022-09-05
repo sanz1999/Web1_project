@@ -35,14 +35,13 @@
              type: 'PUT',
              data: JSON.stringify(korisnik),
              contentType: 'application/json; charset=utf-8',
-             dataType: 'json',
-            success: function () {
+             success: function () {
                 alert("Uspesno sacuvano");
                 window.location.href = 'Index.html';
-            },
-            error: function (data) {
-                alert(data.responseJSON['Message']);
-            }
+             },
+             error: function (data) {
+                    alert(data.responseJSON['Message']);
+             }
 
          });
     });

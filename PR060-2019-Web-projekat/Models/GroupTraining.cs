@@ -10,9 +10,10 @@ namespace PR060_2019_Web_projekat.Models
     {
         
 
-        public GroupTraining(int id, Enum_TrainingType type, int centerId, int duration, DateTime appointment, int capacity, List<int> visitors, bool exist)
+        public GroupTraining(int id,string trainingName, Enum_TrainingType type, int centerId, int duration, DateTime appointment, int capacity, List<int> visitors, bool exist)
         {
             Id = id;
+            TrainingName = trainingName;
             Type = type;
             CenterId = centerId;
             Duration = duration;
@@ -23,6 +24,8 @@ namespace PR060_2019_Web_projekat.Models
         }
 
         public int Id { get; set; }
+
+        public string TrainingName { get; set; }
 
         public Enum_TrainingType Type { get; set; }
 

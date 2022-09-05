@@ -58,10 +58,39 @@ function FillGCTable(data) {
     }
     else {
         data.forEach(function (item) {
+            d = new Date(item.Appointment);
+            date = d.getDate() + "-" + (d.getMonth() + 1) + "-" + d.getFullYear() + " / " + item.Appointment.slice(-8).substring(0, 5);
             var pos = item.Visitors.length + "/" + item.Capacity;
-            var row = "<tr><td>" + item.Id + "</td><td>" + types[item.Type] + "</td><td>" + item.Duration + " minuta</td><td>" + item.Appointment + "</td><td>" + pos + "</td></tr>";
+            var row = "<tr><td>" + item.Id + "</td><td>"+item.TrainingName+"</td><td>" + types[item.Type] + "</td><td>" + item.Duration + " minuta</td><td>" + date + "</td><td>" + pos + "</td>";
+            if (sessionStorage.getItem("user_type") == "Visitor") {
+                row += "<td ><button class=\"apply-training\" id=\""+item.Id+"\">Upisi se</button></td>";
+            }
+            row += "</tr > "
             $('#group-trainings-details-table').append(row);
         });
+
+        if (sessionStorage.getItem("user_type") == "Visitor") {
+            $(document).on('click', '.apply-training', function () {
+                event.preventDefault();
+                var korisnik = {
+                    "Username": sessionStorage.getItem("user_username"),
+                    "Password": $(this).attr('id')
+                }
+                $.ajax({
+                    type: "POST",
+                    url: '/api/GroupTraining/AddVisitor',
+                    data: korisnik,
+                    success: function () {
+                        alert("Uspesno upisan na trening");
+                        window.location.href = 'FitnessCenterDetails.html';
+                    },
+                    error: function (data) {
+                        alert(data.responseJSON['Message']);
+                    }
+
+                });
+            })
+        }
     }
 
 }

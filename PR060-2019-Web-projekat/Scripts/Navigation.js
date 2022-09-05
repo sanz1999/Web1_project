@@ -102,7 +102,7 @@ function Visitor() {
 }
 function Trainer() {
     $("#nav-index").show();
-    $("#nav-history").show();
+    $("#nav-history").hide();
     $("#nav-my-trainings").show();
     $("#nav-edit-trainers").hide();
     $("#nav-edit-centers").hide();

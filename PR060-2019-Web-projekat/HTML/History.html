@@ -32,6 +32,91 @@
         </nav>
     </header>
     <!--------------------HOME--------------------------------->
+    <br />
+    <br />
+    
+    <div id="trainings-search">
+        <table id="search-table-gt">
+            <tr>
+                <th rowspan="2">Pretraga</th>
+                <th>Naziv centra</th>
+                <th>Naziv treninga</th>
+                <th>Tip treninga</th>
+                <th rowspan="2"><button id="search-button">Pretrazi</button></th>
+            </tr>
+            <tr>
+                <td><input type="text" id="search-name-center" placeholder="Centar" /></td>
+                <td><input type="text" id="search-name-training" placeholder="Naziv" /></td>
+                <td><input type="text" id="search-type-training" placeholder="Tip" /></td>
+            </tr>
+
+        </table>
+
+
+
+    </div>
+    <br />
+    <br />
+    <div id="my-trainings-div">
+        <h2>Poseceni grupni treninzi</h2>
+    </div>
+
+    <div id="my-trainings-div">
+
+        <table id="group-trainings-details-tablee">
+            <colgroup>
+                <col style="width:20%">
+                <col style="width:20%">
+                <col style="width:20%">
+                <col style="width:25%">
+                <col style="width:15%">
+                <col style="width:15%">
+            </colgroup>
+
+            <tr>
+                <th>Naziv centra</th>
+                <th>Naziv treninga</th>
+                <th>Tip</th>
+                <th>Trajanje</th>
+                <th>Datum / Vreme</th>
+                <th>Prijavljeno/Ukupno</th>
+                <th>Ostavi komentar</th>
+            </tr>
+        </table>
+
+    </div>
+    <br />
+    <br />
+    <div id="new-comment" class="hidden">
+        <form>
+            <table id="new-comment-table">
+                <colgroup>
+                    <col style="width:35%">
+                    <col style="width:65%">
+                </colgroup>
+                <tr>
+                    <th>Korisnicko ime:</th>
+                    <td id="comment-username">Marko</td>
+                </tr>
+                <tr>
+                    <th>Naziv Centra:</th>
+                    <td id="comment-fc-name">Centar</td>
+                </tr>
+                <tr>
+                    <th>Ocena (1-5):</th>
+                    <td ><input id="comment-grade" type="number" min="1" max="5" /></td>
+                </tr>
+                <tr>
+                    <th>Komentar:</th>
+                    <td ><input id="comment-content" type="text" maxlength="128" /></td>
+                </tr>
+                <tr>
+                    <th colspan="2" align="center"><button id="cancel-comment">Cancel</button><button id="make-comment" type="submit">Potvrdi</button></th>
+                </tr>
+            </table>
+        </form>
+
+    </div>
 
 
 

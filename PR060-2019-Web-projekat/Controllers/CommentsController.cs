@@ -21,5 +21,17 @@ namespace PR060_2019_Web_projekat.Controllers
             }
             return selected;
         }
+        [HttpPut]
+        [Route("api/Comments/NewComment")]
+        public IHttpActionResult NewComment([FromBody]Comment newComment)
+        {
+            Comments comments = HttpContext.Current.Application["Comments"] as Comments;
+            newComment.Id = comments.ListOfComments.Count()+1;
+            newComment.Approved = false;
+            comments.ListOfComments.Add(newComment);
+            Comments.Save(comments.ListOfComments);
+            HttpContext.Current.Application["Comments"] = comments;
+            return Ok();
+        }
     }
 }

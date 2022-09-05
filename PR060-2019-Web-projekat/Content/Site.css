@@ -149,3 +149,68 @@ button {
     justify-content: center;
     color: antiquewhite;
 }
+
+#my-trainings-div {
+    display: flex;
+    justify-content: center;
+    color: antiquewhite;
+}
+
+#group-trainings-details-tablee {
+    table-layout: fixed;
+    background-color: #71615c;
+    border: 3px solid #372c2a;
+    text-align: center;
+    width: 80%;
+}
+#group-trainings-details-tablee tr {
+    border: 3px solid #372c2a;
+}
+
+#group-trainings-details-tablee th {
+    cursor: pointer;
+}
+#search-table-gt {
+    width: 60%;
+    table-layout: fixed;
+    background-color: #71615c;
+    border: 3px solid #372c2a;
+    text-align: center;
+}
+#search-table-gt input {
+    color: black;
+    width: 150px;
+}
+#trainings-search {
+    display: flex;
+    justify-content: center;
+    color: antiquewhite;
+}
+#new-comment {
+    display: flex;
+    justify-content: center;
+    color: antiquewhite;
+}
+.hidden {
+    display: none;
+
+}
+.active {
+    display:flex;
+    margin:auto;
+    color: antiquewhite;
+}
+#new-comment-table {
+    width: 40%;
+    table-layout: fixed;
+    background-color: #71615c;
+    border: 3px solid #372c2a;
+    text-align: center;
+}
+#comment-content {
+    color: black;
+    width: 250px;
+}
+#comment-grade {
+    color:black;
+}

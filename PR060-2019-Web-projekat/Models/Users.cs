@@ -47,13 +47,18 @@ namespace PR060_2019_Web_projekat.Models
             return user;
         }
 
-        public static User AddTrening( string username, int id)
+        public static void AddTrening( int user_id, int id)
         {
-            //GetById(ListOfUsers,username).TreninziPosetilac.Add(id);
+            User user = GetById(user_id);
+            int index = ListOfUsers.IndexOf(user);
+            user.TrainingVisitor.Add(id);
+            ListOfUsers.RemoveAt(index);
+            ListOfUsers.Insert(index, user);
 
-           Save(ListOfUsers);
 
-            return GetByUsername(username);
+            Save(ListOfUsers);
+
+            return ;
         }
 
         public static User Update( User user)
