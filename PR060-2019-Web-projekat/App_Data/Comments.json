@@ -29,7 +29,7 @@
     "Username": "sanz1999",
     "Content": "",
     "RatingGrade": 5,
-    "Approved": false
+    "Approved": true
   },
   {
     "Id": 5,
@@ -37,6 +37,30 @@
     "Username": "sanz1999",
     "Content": "jasndoinjadsonads",
     "RatingGrade": 5,
+    "Approved": false
+  },
+  {
+    "Id": 6,
+    "CenterId": 1,
+    "Username": "sanz1999",
+    "Content": "Brate ovo nesto mngo dobrao radi",
+    "RatingGrade": 5,
+    "Approved": false
+  },
+  {
+    "Id": 7,
+    "CenterId": 1,
+    "Username": "sanz1999",
+    "Content": "Brate ovo nesto mngo dobrao radi",
+    "RatingGrade": 4,
+    "Approved": false
+  },
+  {
+    "Id": 8,
+    "CenterId": 1,
+    "Username": "sanz1999",
+    "Content": "123qweaqsd",
+    "RatingGrade": 9,
     "Approved": false
   }
 ]

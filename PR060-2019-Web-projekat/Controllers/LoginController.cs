@@ -32,13 +32,18 @@ namespace PR060_2019_Web_projekat.Controllers
         public Login_data Post([FromBody]PersonModel person)
         {
             Users users = HttpContext.Current.Application["Users"] as Users;
+            FitnessCenters centers = HttpContext.Current.Application["FitnessCenters"] as FitnessCenters;
             foreach (User user in Users.ListOfUsers) {
                 if (person.Username == user.UserName && person.Password == user.Password) {
+                    if (user.Exist == false) { return new Login_data(Enum_Role.Undefined, "Banovani ste", false); }
+                    else if ((user.Role == Enum_Role.Trainer) && !FitnessCenters.GetById(centers.ListOfFitnessCenters, user.CenterIdWorking).Exist) {
+                        return new Login_data(Enum_Role.Undefined, "Fitness centar je obrisan u kome radi trener", false);
+                    }
                     HttpContext.Current.Session["user"] = user;
                     return new Login_data(user.Role, user.UserName, true);
                 }
             }
-            return  new Login_data(Enum_Role.Undefined, "", false);
+            return  new Login_data(Enum_Role.Undefined, "Neispravno korisnicko ime ili lozinka", false);
 
 
         }

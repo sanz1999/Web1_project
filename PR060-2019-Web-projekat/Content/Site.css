@@ -214,3 +214,98 @@ button {
 #comment-grade {
     color:black;
 }
+
+
+.btn-show-tr {
+    align-items: center;
+    margin: 10px 25px 25px 10px;
+}
+
+#new-trainings {
+    text-align: center;
+    color: antiquewhite;
+}
+#old-trainings {
+    text-align: center;
+    color: antiquewhite;
+}
+
+#search-table-gt-old {
+    width: 100%;
+    table-layout: fixed;
+    background-color: #71615c;
+    border: 3px solid #372c2a;
+    text-align: center;
+}
+
+#old-trainings-details-tablee {
+    table-layout: fixed;
+    background-color: #71615c;
+    border: 3px solid #372c2a;
+    text-align: center;
+    width: 100%;
+}
+
+#old-trainings-details-tablee th {
+    cursor: pointer;
+}
+.black {
+    color:black;
+}
+#new-trainings-details-tablee {
+    table-layout: fixed;
+    background-color: #71615c;
+    border: 3px solid #372c2a;
+    text-align: center;
+    width: 100%;
+}
+#new-training-div {
+    width: 100%;
+    table-layout: fixed;
+    
+    
+    text-align: center;
+    color:antiquewhite;
+}
+
+#modify-training-div {
+    width: 100%;
+    table-layout: fixed;
+   
+    
+    text-align: center;
+    color: antiquewhite;
+}
+#new-training-name, #new-training-type, #new-training-duration, #new-training-datetime, #new-training-duration, #new-training-capacity {
+    color: black;
+}
+
+#modify-training-name, #modify-training-type, #modify-training-duration, #modify-training-datetime, #modify-training-duration, #modify-training-capacity {
+    color: black;
+}
+#visitors-table {
+    table-layout: fixed;
+    
+    text-align: center;
+    width: 20%;
+    color:antiquewhite;
+}
+
+#trainer-table {
+    table-layout: fixed;
+    background-color: #71615c;
+    border: 3px solid #372c2a;
+    text-align: center;
+    color:antiquewhite;
+    width: 80%;
+}
+#centers-table {
+    table-layout: fixed;
+    background-color: #71615c;
+    border: 3px solid #372c2a;
+    text-align: center;
+    color: antiquewhite;
+    width: 90%;
+}
+
+

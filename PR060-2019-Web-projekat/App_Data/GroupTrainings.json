@@ -1,7 +1,7 @@
 [
   {
     "Id": 1,
-    "TrainingName" : "Zagrevanje",
+    "TrainingName": "Zagrevanje 123",
     "Type": 1,
     "CenterId": 1,
     "Duration": 30,
@@ -66,13 +66,57 @@
     "TrainingName": "Rehabilitacija",
     "Type": 0,
     "CenterId": 1,
-    "Duration": 30,
+    "Duration": 90,
     "Appointment": "2022-10-10T21:22:20",
     "Capacity": 20,
     "Visitors": [
       1,
       8
     ],
+    "Exist": true
+  },
+  {
+    "Id": 7,
+    "TrainingName": "NOVITRENIGN",
+    "Type": 1,
+    "CenterId": 1,
+    "Duration": 30,
+    "Appointment": "2022-10-10T20:00:20",
+    "Capacity": 30,
+    "Visitors": [],
+    "Exist": true
+  },
+  {
+    "Id": 8,
+    "TrainingName": "test naziv",
+    "Type": 0,
+    "CenterId": 2,
+    "Duration": 16,
+    "Appointment": "2022-09-16T21:26:00",
+    "Capacity": 0,
+    "Visitors": [],
+    "Exist": true
+  },
+  {
+    "Id": 9,
+    "TrainingName": "Ovo je test 2",
+    "Type": 2,
+    "CenterId": 2,
+    "Duration": 20,
+    "Appointment": "2022-09-16T21:28:00",
+    "Capacity": 0,
+    "Visitors": [],
+    "Exist": true
+  },
+  {
+    "Id": 10,
+    "TrainingName": "ovo je test 3",
+    "Type": 0,
+    "CenterId": 2,
+    "Duration": 15,
+    "Appointment": "2022-09-15T21:32:00",
+    "Capacity": 0,
+    "Visitors": [],
     "Exist": true
   }
 ]

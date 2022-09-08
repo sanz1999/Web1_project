@@ -21,7 +21,7 @@
                     window.location.href = 'Index.html';
                 }
                 else {
-                    alert("Neispravno korisnicko ime ili lozinka");
+                    alert(data.Username);
                 }
             },
         });

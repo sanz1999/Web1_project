@@ -9,8 +9,13 @@
     "Role": 2,
     "TrainingVisitor": [],
     "TrainingTrainer": [],
-    "CenterIdWorking": 1,
-    "OwnedCenters": [],
+    "CenterIdWorking": -1,
+    "OwnedCenters": [
+      1,
+      2,
+      3,
+      4
+    ],
     "UserName": "urospetrov",
     "Password": "urospetrov",
     "Exist": true
@@ -24,7 +29,14 @@
     "BirthDate": "2000-05-19T11:01:20",
     "Role": 1,
     "TrainingVisitor": [],
-    "TrainingTrainer": [],
+    "TrainingTrainer": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
     "CenterIdWorking": 2,
     "OwnedCenters": [],
     "UserName": "stefanstefan",
@@ -134,5 +146,21 @@
     "UserName": "sanz1999",
     "Password": "hahadlock99",
     "Exist": true
+  },
+  {
+    "Id": 9,
+    "FirstName": "Neko",
+    "LastName": "NEKOPREZIME",
+    "Gender": 0,
+    "EMail": "neko@gmail.com",
+    "BirthDate": "2021-01-01T00:00:00",
+    "Role": 1,
+    "TrainingVisitor": [],
+    "TrainingTrainer": [],
+    "CenterIdWorking": 1,
+    "OwnedCenters": [],
+    "UserName": "trener1",
+    "Password": "123",
+    "Exist": false
   }
 ]

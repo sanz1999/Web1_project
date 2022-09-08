@@ -1,4 +1,4 @@
-﻿[
+[
   {
     "Id": 1,
     "Name": "Ahilej",
@@ -8,7 +8,7 @@
       "ZIP": 21000
     },
     "OpeningDate": "2000-10-04T01:20:20",
-    "OwnerId": 3,
+    "OwnerId": 2,
     "FeeYear": 1200,
     "FeeMonth": 900,
     "PriceTrainig": 250,
@@ -25,7 +25,7 @@
       "ZIP": 21001
     },
     "OpeningDate": "2005-10-04T01:20:20",
-    "OwnerId": 3,
+    "OwnerId": 2,
     "FeeYear": 1100,
     "FeeMonth": 800,
     "PriceTrainig": 350,
@@ -42,13 +42,29 @@
       "ZIP": 21001
     },
     "OpeningDate": "2009-10-04T01:20:20",
-    "OwnerId": 3,
+    "OwnerId": 2,
     "FeeYear": 11100,
     "FeeMonth": 8100,
     "PriceTrainig": 3510,
     "PriceTrainingGroup": 2410,
     "PriceTrainingPrivate": 5100,
+    "Exist": false
+  },
+  {
+    "Id": 4,
+    "Name": "123",
+    "Addresss": {
+      "Street": "ULICA 1",
+      "City": "NEKI GRAD",
+      "ZIP": 12312
+    },
+    "OpeningDate": "2022-08-31T00:00:00",
+    "OwnerId": 2,
+    "FeeYear": 1233,
+    "FeeMonth": 123,
+    "PriceTrainig": 1233,
+    "PriceTrainingGroup": 1233,
+    "PriceTrainingPrivate": 1233,
     "Exist": true
   }
-
 ]

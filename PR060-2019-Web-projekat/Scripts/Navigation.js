@@ -30,6 +30,9 @@ $(document).ready(function () {
 
 
     //NAVIGATION
+    $('#nav-comments').click(function () {
+        window.location.href = "Comments.html";
+    });
     $('#nav-index').click(function () {
         window.location.href = "Index.html";
     });
@@ -86,6 +89,7 @@ function Unregistered() {
     $("#nav-login").show();
     $("#nav-profile").hide();
     $("#nav-sign_out").hide();
+    $("#nav-comments").hide();
      
 }
 function Visitor() {
@@ -98,6 +102,7 @@ function Visitor() {
     $("#nav-login").hide();
     $("#nav-profile").show();
     $("#nav-sign_out").show();
+    $("#nav-comments").hide();
 
 }
 function Trainer() {
@@ -110,6 +115,7 @@ function Trainer() {
     $("#nav-login").hide();
     $("#nav-profile").show();
     $("#nav-sign_out").show();
+    $("#nav-comments").hide();
 
 }
 function Owner() {
@@ -122,5 +128,6 @@ function Owner() {
     $("#nav-login").hide();
     $("#nav-profile").show();
     $("#nav-sign_out").show();
+    $("#nav-comments").show();
 
 }

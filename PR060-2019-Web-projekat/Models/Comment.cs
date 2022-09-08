@@ -9,15 +9,7 @@ namespace PR060_2019_Web_projekat.Models
     {
         
 
-        public Comment(int id, int centerId, string username, string content, bool approved, int ratingGrade)
-        {
-            Id = id;
-            CenterId = centerId;
-            Username = username;
-            Content = content;
-            Approved = approved;
-            RatingGrade = ratingGrade;
-        }
+       
 
         public int Id { get; set; }
 

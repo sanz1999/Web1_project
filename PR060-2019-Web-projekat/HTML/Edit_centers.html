@@ -18,8 +18,9 @@
                 <li><a id="nav-index" href="#">Fitnes Centri</a></li>
                 <li><a id="nav-history" href="#">Istorija</a></li>
                 <li><a id="nav-my-trainings" href="#">Moji treninzi</a></li>
-                <li><a id="nav-edit-trainers" href="#">Upravljaj trenerima</a></li>
+                <li><a id="nav-edit-trainers" href="#">Dodaj trenera</a></li>
                 <li><a id="nav-edit-centers" href="#">Upravljaj fitnes centrima</a></li>
+                <li><a id="nav-comments" href="#">Komentari</a></li>
             </ul>
         </nav>
         <nav class="nav-right">
@@ -32,7 +33,121 @@
         </nav>
     </header>
     <!--------------------HOME--------------------------------->
+    <button id="new-center-show">Kreiraj centar</button>
+    <div id="new-center-div" class="container">
 
+        <table id="new-center-create-table">
+            <tr>
+                <th colspan="2">Kreiranje novog centra</th>
+            </tr>
+            <tr>
+                <td>Naziv centra</td>
+                <td><input type="text" id="new-center-name" placeholder="Naziv" /></td>
+            </tr>
+            <tr>
+                <td>Datum otvaranja</td>
+                <td> <input type="date" id="new-center-date" /></td>
+            </tr>
+            
+            <tr>
+                <td>Cena mesecne clanarine</td>
+                <td><input type="number"  id="new-FeeMonth"/></td>
+            </tr>
+            <tr>
+                <td>Cena godisnje clanarine</td>
+                <td><input type="number" id="new-FeeYear"/></td>
+            </tr>
+            <tr>
+                <td>Cena treninga</td>
+                <td><input type="number"  id="new-PriceTrainig"/></td>
+            </tr>
+            <tr>
+                <td>Cena grupnog treinga</td>
+                <td><input type="number"  id="new-PriceTrainingGroup"/></td>
+            </tr>
+            <tr>
+                <td>Cena privatnog treninga</td>
+                <td><input type="number"  id="new-PriceTrainingPrivate"/></td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center"><button id="new-center-submit">Kreiraj</button><button id="new-center-cancel">Otkazi</button></td>
+            </tr>
+
+        </table>
+
+
+
+    </div>
+    <!----------------MODIFY EXISTING Center---------------------------------->
+    <div id="modify-center-div" class="container">
+
+        <table id="modify-center-create-table">
+            <tr>
+                <th colspan="2">Izmena centra</th>
+            </tr>
+            <tr>
+                <td>Naziv centra</td>
+                <td><input type="text" id="modify-center-name" placeholder="Naziv" /></td>
+            </tr>
+            <tr>
+                <td>Datum otvaranja</td>
+                <td> <input type="date" id="modify-center-date" /></td>
+            </tr>
+            
+            <tr>
+                <td>Cena mesecne clanarine</td>
+                <td><input type="number" id="modify-FeeMonth" /></td>
+            </tr>
+            <tr>
+                <td>Cena godisnje clanarine</td>
+                <td><input type="number" id="modify-FeeYear" /></td>
+            </tr>
+            <tr>
+                <td>Cena treninga</td>
+                <td><input type="number" id="modify-PriceTrainig" /></td>
+            </tr>
+            <tr>
+                <td>Cena grupnog treinga</td>
+                <td><input type="number" id="modify-PriceTrainingGroup" /></td>
+            </tr>
+            <tr>
+                <td>Cena privatnog treninga</td>
+                <td><input type="number" id="modify-PriceTrainingPrivate" /></td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center"><button id="modify-center-submit">Izmeni</button><button id="modify-center-cancel">Otkazi</button></td>
+            </tr>
+
+        </table>
+
+
+
+    </div>
+
+    <div id="centers-div" class="container">
+        <table id="centers-table">
+            <colgroup>
+                <col style="width:20%">
+                <col style="width:20%">
+                <col style="width:20%">
+                <col style="width:20%">
+                <col style="width:20%">
+            </colgroup>
+            <tr>
+                <th>Id</th>
+                <th>Naziv</th>
+                <th>Adresa</th>
+                <th>Datum otvaranja</th>
+                <th>Opcije</th>
+            </tr>
+
+        </table>
+
+
+
+    </div>
 
 
 

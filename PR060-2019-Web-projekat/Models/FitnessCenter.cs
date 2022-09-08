@@ -8,21 +8,6 @@ namespace PR060_2019_Web_projekat.Models
     public class FitnessCenter
     {
         
-        public FitnessCenter(int id, string name, Address address, DateTime openingDate, string ownerId, int feeYear, int feeMonth, int priceTrainig, int priceTrainingGroup, int priceTrainingPrivate, bool exist)
-        {
-            Id = id;
-            Name = name;
-            Addresss = address;
-            OpeningDate = openingDate;
-            OwnerId = ownerId;
-            FeeYear = feeYear;
-            FeeMonth = feeMonth;
-            PriceTrainig = priceTrainig;
-            PriceTrainingGroup = priceTrainingGroup;
-            PriceTrainingPrivate = priceTrainingPrivate;
-            Exist = exist;
-        }
-
         public int Id { get; set; }
 
         public string Name { get; set; }
@@ -31,7 +16,7 @@ namespace PR060_2019_Web_projekat.Models
 
         public DateTime OpeningDate { get; set; }
 
-        public string OwnerId { get; set; }
+        public int OwnerId { get; set; }
 
         public int FeeYear { get; set; }
 

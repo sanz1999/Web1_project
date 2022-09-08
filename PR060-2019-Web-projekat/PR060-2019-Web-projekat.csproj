@@ -188,6 +188,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="HTML\Comments.html" />
     <Content Include="HTML\Edit_centers.html" />
     <Content Include="HTML\Edit_trainers.html" />
     <Content Include="HTML\FitnessCenterDetails.html" />
@@ -223,6 +224,7 @@
     <Content Include="App_Data\GroupTrainings.json" />
     <Content Include="App_Data\FitnessCenters.json" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\Comments.js" />
     <Content Include="Scripts\Edit_centers.js" />
     <Content Include="Scripts\Edit_trainers.js" />
     <Content Include="Scripts\FitnessCenterDetails.js" />

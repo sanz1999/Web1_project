@@ -19,7 +19,7 @@ namespace PR060_2019_Web_projekat.Controllers
 
             person.Exist = true;
             person.CenterIdWorking = -1;
-            person.Id = Users.ListOfUsers.Count;
+            person.Id = Users.ListOfUsers.Count+1;
             person.OwnedCenters = new List<int>();
             person.TrainingTrainer = new List<int>();
             person.TrainingVisitor = new List<int>();
@@ -62,10 +62,36 @@ namespace PR060_2019_Web_projekat.Controllers
             HttpContext.Current.Application["Users"] = users;
             return Ok();
         }
-        
-        
-     
-     
+
+        [HttpPost]
+        [Route("api/registration/Trainer")]
+        public IHttpActionResult Trainer([FromBody]User person)
+        {
+            Users users = HttpContext.Current.Application["Users"] as Users;
+            person.Role = Enum_Role.Trainer;
+            person.Exist = true;
+            person.Id = Users.ListOfUsers.Count+1;
+            person.OwnedCenters = new List<int>();
+            person.TrainingTrainer = new List<int>();
+            person.TrainingVisitor = new List<int>();
+
+            if (Users.FindByMail(person.EMail))
+            {
+                return BadRequest("Prosledjeni e-mail je vec u upotrebi");
+            }
+            else if (Users.ExistByUsername(person.UserName))
+            {
+                return BadRequest("Korisnicko ime je zauzeto");
+            }
+            Users.Add(person);
+            HttpContext.Current.Application["Users"] = users;
+            return Ok();
+
+        }
+
+
+
+
 
     }
 }

@@ -4,11 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <script src="../Scripts/jquery-3.3.1.js"></script>
-    <script src="../Scripts/Index.js"></script>
+    <script src="../Scripts/Comments.js"></script>
     <script src="../Scripts/Navigation.js"></script>
     <link href="../Content/bootstrap.css" rel="stylesheet" />
     <link href="../Content/Site.css" rel="stylesheet" />
-    <title>Fitnes centri</title>
+    <title>Prijava</title>
 </head>
 <body>
     <!---------------HEADER WITH MENU-------------------->
@@ -32,35 +32,28 @@
             </ul>
         </nav>
     </header>
-    <!--------------------HOME--------------------------------->
-    <br />
-    <br />
-    <div id="fitness-centers-search">
-        <table id="search-table">
+    <!--------------------Comments--------------------------------->
+    <div class="container" id="comment-div">
+        <table id="comments-table">
+            <colgroup>
+                <col style="width:10%">
+                <col style="width:20%">
+                <col style="width:10%">
+                <col style="width:50%">
+                <col style="width:10%">
+            </colgroup>
             <tr>
-                <th rowspan="2">Pretraga</th>
-                <th>Naziv</th>
-                <th>Adresa</th>
-                <th>Godina otvaranja</th>
-                <th rowspan="2"><button id="search-button">Pretrazi</button></th>
+                <th>Id</th>
+                <th>Korisnicko ime</th>
+                <th>Ocena</th>
+                <th>Sadrzaj</th>
+                <th>Status</th>
             </tr>
-            <tr>
-                <td><input type="text" id="search-name" placeholder="Ime" /></td>
-                <td><input type="text" id="search-address" placeholder="Adresa" /></td>
-                <td><input type="number" id="search-min-year" min="1999" max="2022" placeholder="min" /><input type="number" id="search-max-year" min="1999" max="2022" placeholder="max" /></td>
-            </tr>
-
         </table>
 
 
-
     </div>
-    <br />
-    <br />
-    <div id="fitness-centers-div">
-
-    </div>
-
+   
 
 
 </body>

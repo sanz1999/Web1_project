@@ -22,6 +22,7 @@ namespace PR060_2019_Web_projekat.Models
             Visitors = visitors;
             Exist = exist;
         }
+        public GroupTraining() { }
 
         public int Id { get; set; }
 

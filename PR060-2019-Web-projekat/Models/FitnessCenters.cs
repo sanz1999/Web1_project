@@ -29,7 +29,17 @@ namespace PR060_2019_Web_projekat.Models
         {
             return centers.Find(o => o.Id == id);
         }
+        internal static void Save(List<FitnessCenter> ListOfCenters)
+        {
+            string path = "~/App_Data/FitnessCenters.json";
+            path = HostingEnvironment.MapPath(path);
+            string json = JsonConvert.SerializeObject(ListOfCenters, Formatting.Indented);
 
+            using (StreamWriter sw = new StreamWriter(path))
+            {
+                sw.WriteLine(json);
+            }
+        }
 
     }
 }

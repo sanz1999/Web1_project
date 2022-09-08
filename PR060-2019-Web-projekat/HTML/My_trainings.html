@@ -18,8 +18,9 @@
                 <li><a id="nav-index" href="#">Fitnes Centri</a></li>
                 <li><a id="nav-history" href="#">Istorija</a></li>
                 <li><a id="nav-my-trainings" href="#">Moji treninzi</a></li>
-                <li><a id="nav-edit-trainers" href="#">Upravljaj trenerima</a></li>
+                <li><a id="nav-edit-trainers" href="#">Dodaj trenera</a></li>
                 <li><a id="nav-edit-centers" href="#">Upravljaj fitnes centrima</a></li>
+                <li><a id="nav-comments" href="#">Komentari</a></li>
             </ul>
         </nav>
         <nav class="nav-right">
@@ -31,10 +32,180 @@
             </ul>
         </nav>
     </header>
-    <!--------------------HOME--------------------------------->
+    <!--------------------BUTTONS--------------------------------->
+    <div id="show-trainings-buttons" class="container">
+        <button id="show-old-trainigs" class="btn-show-tr">Prikazi odradjene treninge</button>
+        <button id="show-new-trainigs" class="btn-show-tr">Prikazi predstojece treninge</button>
+        <button id="new-training" class="btn-show-tr">Novi trening</button>
+    </div>
+    <!----------------CREATE NEW TRAINING---------------------------------->
+    <div id="new-training-div" class="container">
+        
+            <table id="new-training-create-table">
+                <tr>
+                    <th colspan="2">Kreiranje novog treninga</th>
+                </tr>
+                <tr>
+                    <td>Naziv treninga</td>
+                    <td><input type="text" id="new-training-name" placeholder="Naziv" /></td>
+                </tr>
+                <tr>
+                    <td>Tip treninga</td>
+                    <td>
+                        <select id="new-training-type">
+                            <option value="0">Yoga</option>
+                            <option value="1">LesMillsTone</option>
+                            <option value="2">BodyPump</option>
+                            <option value="3">Cardio</option>
+                            <option value="4">Other</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Trajanje</td>
+                    <td><input type="number" min="15" max="180" maxlength="3" id="new-training-duration" placeholder="Trajanje" /></td>
+                </tr>
+                <tr>
+                    <td>Datum i vreme</td>
+                    <td> <input type="datetime-local" id="new-training-datetime" /></td>
+                </tr>
+                <tr>
+                    <td>Kapacitet</td>
+                    <td><input type="number" min="5" max="50" maxlength="2" id="new-training-duration" placeholder="Kapacitet" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><button id="new-training-submit">Kreiraj</button><button id="new-training-cancel">Otkazi</button></td>
+                </tr>
+
+            </table>
 
 
+      
+    </div>
+    <!----------------MODIFY EXISTING TRAINING---------------------------------->
+    <div id="modify-training-div" class="container">
+        
+            <table id="modify-training-create">
+                <tr>
+                    <th colspan="2">Uredjivanje postojeceg treninga</th>
+                </tr>
+                <tr>
+                    <td>Naziv treninga</td>
+                    <td><input type="text" id="modify-training-name" placeholder="Naziv" /></td>
+                </tr>
+                <tr>
+                    <td>Tip treninga</td>
+                    <td>
+                        <select id="modify-training-type">
+                            <option value="0">Yoga</option>
+                            <option value="1">LesMillsTone</option>
+                            <option value="2">BodyPump</option>
+                            <option value="3">Cardio</option>
+                            <option value="4">Other</option>
+                        </select>
+                    </td>
+                </tr>
 
+                <tr>
+                    <td>Trajanje</td>
+                    <td><input type="number" min="15" max="180" maxlength="3" id="modify-training-duration" placeholder="Trajanje" /></td>
+                </tr>
+                <tr>
+                    <td>Datum i vreme</td>
+                    <td> <input type="datetime-local" id="modify-training-datetime" /></td>
+                </tr>
+                <tr>
+                    <td>Kapacitet</td>
+                    <td><input type="number" min="5" max="50" maxlength="2" id="modify-training-capacity" placeholder="Kapacitet" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><button id="modify-training-submit">Kreiraj</button><button id="modify-training-cancel">Otkazi</button></td>
+                </tr>
+
+            </table>
+
+
+        
+    </div>
+    <!--------------------------VISITORS----------------------------------->
+    <div id="visitors-div" class="container">
+        
+        <table id="visitors-table">
+            <tr>
+                <th>Posetioci</th>
+            </tr>
+            
+        </table>
+    </div>
+    <!----------------UPCOMING TRAININGS---------------------------------->
+    <div id="new-trainings">
+        <h1>BUDUCI TRENINZI</h1>
+        <table id="new-trainings-details-tablee">
+            <colgroup>
+                <col style="width:15%">
+                <col style="width:15%">
+                <col style="width:15%">
+                <col style="width:20%">
+                <col style="width:15%">
+                <col style="width:15%">
+                <col style="width:20%">
+                <col style="width:10%">
+
+            </colgroup>
+            <tr>
+                <th>Naziv centra</th>
+                <th>Naziv treninga</th>
+                <th>Tip</th>
+                <th>Trajanje</th>
+                <th>Datum / Vreme</th>
+                <th>Prijavljeno/Ukupno</th>
+                <th>Obrisi/Izmeni</th>
+                <th>Posetioci</th>
+            </tr>
+        </table>
+    </div>
+
+    <!----------------PAST TRAININGS---------------------------------->
+    <div id="old-trainings">
+        <h1>ODRADJENI TRENINZI</h1>
+        <table id="search-table-gt-old">
+            <tr>
+                <th rowspan="2">Pretraga</th>
+                <th>Naziv treninga</th>
+                <th>Tip treninga</th>
+                <th>Vreme</th>
+                <th rowspan="2"><button id="search-button">Pretrazi</button></th>
+            </tr>
+            <tr>
+                <td><input type="text" class="black" id="search-name-training" placeholder="Centar" /></td>
+                <td><input type="text" class="black " id="search-type-training" placeholder="Tip" /></td>
+                <td><input type="time" class="black" id="search-min-time" min="1999" max="2022" placeholder="min" /><input type="time" class="black" id="search-max-time" min="1999" max="2022" placeholder="max" /></td>
+            </tr>
+
+        </table>
+        <br />
+
+        <table id="old-trainings-details-tablee">
+            <colgroup>
+                <col style="width:20%">
+                <col style="width:20%">
+                <col style="width:15%">
+                <col style="width:20%">
+                <col style="width:15%">
+                <col style="width:10%">
+            </colgroup>
+            <tr>
+                <th>Naziv centra</th>
+                <th>Naziv treninga</th>
+                <th>Tip</th>
+                <th>Trajanje</th>
+                <th>Datum / Vreme</th>
+                <th>Prijavljeno/Ukupno</th>
+                <th>Posetioci</th>
+            </tr>
+        </table>
+    </div>
 
 </body>
 </html>
